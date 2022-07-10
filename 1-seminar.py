@@ -33,4 +33,25 @@ def find_max(list):
 print (find_max(num_list))
 '''
 #Задача 3: на вход N, на выход от -N до N
+'''
 N = int(input("введите число N:  "))
+
+def get_list(a):
+    if a < 0: 
+        a=a*-1
+    numbers = list(range(-a, a+1))
+    return (numbers)
+
+print(get_list(N))
+'''
+#На вход дробь, показывать первую цифру дробной части числа.
+N =input('введите дробное число:  ')
+string = N.split('.') #31.478
+try:
+    string2 = string[1]
+    print(string2[0])
+except:
+    print('число не дробное')
+
+
+#На вход число и проверяет, кратно ли оно 5 и 10 или 15, но не 30.
