@@ -27,9 +27,9 @@ else:
         elif ( a>0 and b<0):
             print('4th quarter')
         elif (a==0 and b!=0):
-            print('on axis X')
-        elif(a!=0 and b ==0):
             print('on axis Y')
+        elif(a!=0 and b ==0):
+            print('on axis X')
         else:
              print('в астрале')
 quarter_check(x,y)
