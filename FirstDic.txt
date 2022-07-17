@@ -1,0 +1,5 @@
+min: 15,  
+index_min: 3,  
+max: 351,  
+index_max: 1,  
+average_list: 107.2,  
