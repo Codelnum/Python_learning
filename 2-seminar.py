@@ -52,6 +52,7 @@ else:
             
 '''
 #КНБ - вы играете с ботом, варианты раунда игры - победа 1 очко, проигрыш 0 очков, ничья 0.5 балла, чтоб статистика сохранялась, и можно было играть неограниченное количество раундов
+
 p_score = 0
 b_score = 0
 
@@ -62,34 +63,34 @@ while True:
     if num1 == 1 and num2 ==1:
         p_score+=0.5
         b_score+=0.5
-        print(f"no win. (player:{p_score}, bot:{b_score}")
+        print(f"no win (player:{p_score}, bot:{b_score})")
     elif num1 == 1 and num2 == 2:
         p_score+=1
-        print(f"player win (player:{p_score}, bot:{b_score}")
+        print(f"player win (player:{p_score}, bot:{b_score})")
     elif num1 == 1 and num2 == 3:
         b_score+=1
-        print("computer win (player:{p_score}, bot:{b_score}")
+        print(f"computer win (player:{p_score}, bot:{b_score})")
     elif num1 == 2 and num2 == 2:
         p_score+=0.5
         b_score+=0.5
-        print("no win (player:{p_score}, bot:{b_score}")
+        print(f"no win (player:{p_score}, bot:{b_score})")
     elif num1 == 2 and num2 == 1:
         b_score+=1
-        print("computer win (player:{p_score}, bot:{b_score}")
+        print(f"computer win (player:{p_score}, bot:{b_score})")
     elif num1 == 2 and num2 == 3:
         p_score+=1
-        print(f"player win (player:{p_score}, bot:{b_score}")
+        print(f"player win (player:{p_score}, bot:{b_score})")
 
     elif num1 == 3 and num2 == 3:
         p_score+=0.5
         b_score+=0.5
-        print("no win (player:{p_score}, bot:{b_score}")
+        print(f"no win (player:{p_score}, bot:{b_score})")
     elif num1 == 3 and num2 == 2:
         b_score+=1
-        print("computer win (player:{p_score}, bot:{b_score}")
+        print(f"computer win (player:{p_score}, bot:{b_score})")
     elif num1 == 3 and num2 == 1:
         p_score+=1
-        print(f"player win (player:{p_score}, bot:{b_score}")
+        print(f"player win (player:{p_score}, bot:{b_score})")
     else:
         print("введите число от 1 до 3")
 
