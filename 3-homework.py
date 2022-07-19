@@ -21,16 +21,25 @@ x = "".join(random.choice(letters))
 print(f'Ищем букву "{x}":')
 
 def find_second_match(list, letter):
-    index=0
     count=0
-    for i in list:
+    for (index,i) in enumerate(list):
         if letter in i:
             count+=1
-            if count ==2:
-                index = i
-    return index
+        elif count ==2:
+            ind=index
+            break
+        else: 
+            ind=count
+    return ind
 
-print(find_second_match(gen_list, x))
+value = (find_second_match(gen_list, x))
+
+if value == 0:
+    print(f"Нет такой буквы")
+elif value!=0 <2:
+    print("Нет второго вхождения")
+else:
+    print(f"Индекс второго вхождения:{value}")
 
 
 
