@@ -25,18 +25,18 @@ def find_second_match(list, letter):
     for (index,i) in enumerate(list):
         if letter in i:
             count+=1
-        elif count ==2:
-            ind=index
-            break
+            if count ==2:
+                ind=index
+                break
         else: 
             ind=count
     return ind
 
 value = (find_second_match(gen_list, x))
-
+print (value)
 if value == 0:
     print(f"Нет такой буквы")
-elif value!=0 <2:
+elif value!=0 and value <2:
     print("Нет второго вхождения")
 else:
     print(f"Индекс второго вхождения:{value}")
