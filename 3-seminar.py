@@ -16,15 +16,10 @@ def get_sum(a):
 print(get_sum(num)[0])
 print(get_sum(num)[1])
 '''
-# Задача 2: сделать функцию, на вход принимающую список, на выходе возращающая словарь, где указаны:
-#  максимальное число,
-#  минимальное,
-#  их индексы,
-#  и среднее арифметическое 
-
+# Задача 2: сделать функцию, на вход принимающую список, на выходе возращающая словарь, где указаны:  максимальное число,  минимальное, их индексы, и среднее арифметическое 
+'''
 input_list  = list(map(int, input("введите числа через пробел:  ").split() ))
 length = len(input_list)
-
 
 def find_min(list):
     min = list[0]
@@ -57,3 +52,26 @@ file = open('FirstDic.txt', 'w')
 for a,b in dict.items():
     file.write(f'{a}: {b},  \n')
 file.close()
+
+'''
+
+# Задайте список из N элементов, заполненных числами из промежутка [-N, N]. сохраните список в формате JSON.
+import json
+
+n = int(input("введите N:  "))
+
+def get_list(a):
+    list=[]
+    for i in range(-a,a+1): 
+        list.append(i)
+        i+=1
+    return list
+
+
+print(get_list(n))
+
+with open ('first.json', 'w', encoding = ' utf-8') as file:
+    json.dump ( get_list(n) ,  file) 
+
+with open ('first.txt', 'w', encoding = ' utf-8') as file:
+    file.write( str(get_list(n))) 
