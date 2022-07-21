@@ -1,4 +1,5 @@
-# 1. Задайте список. Напишите программу, которая определит, присутствует ли в заданном списке строк некое число.
+#1. Задайте список. Напишите программу, которая определит, присутствует ли в заданном списке строк некое число.
+#2. Напишите программу, которая определит позицию второго вхождения строки в списке либо сообщит, что её нет.
 import random
 import string
 
@@ -18,6 +19,7 @@ gen_list = (get_list(list_length,word_length))
 print(gen_list)
 x = "".join(random.choice(letters))
 
+
 print(f'Ищем букву "{x}":')
 
 def find_second_match(list, letter):
@@ -34,6 +36,7 @@ def find_second_match(list, letter):
 
 value = (find_second_match(gen_list, x))
 print (value)
+
 if value == 0:
     print(f"Нет такой буквы")
 elif value!=0 and value <2:
